@@ -108,3 +108,9 @@ def bisection(a: float, b: float, nmax: int, f: type) -> list:
             fa = fc
     x.append((a + b) / 2)
     return x
+
+
+def heron(x0, R, nmax):
+    for _ in range(nmax):
+        x0 = 0.5 * (x0 + (R / x0))
+    return x0

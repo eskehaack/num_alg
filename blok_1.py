@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 import numpy as np
 import pandas as pd
-from funtionality.roots import bisection, newton, secant
+from funtionality.roots import bisection, newton, secant, heron
 
 # def horner(
 #     a: list,
@@ -115,3 +115,52 @@ from funtionality.roots import bisection, newton, secant
 
 # f = lambda x: math.sin(x)
 # print(secant(math.pi / 2 - 0.1, math.pi / 2 + 0.1, 4, f))
+
+
+# data = loadmat("data/Grovdata.mat")
+# x, y = data["x"].flatten(), data["y"].flatten()
+# plt.plot(x, y, ".")
+
+
+# def my_func(x, c0, c1, c2, c3, c4, c5, c6, c7, c8):
+#     return (
+#         c0
+#         + c1 * x
+#         + c2 * x**2
+#         + c3 * x**3
+#         + c4 * x**4
+#         + c5 * x**5
+#         + c6 * x**6
+#         + c7 * x**7
+#         + c8 * x**8
+#     )
+
+
+# coefs, _ = curve_fit(my_func, x, y)
+# x_plot = np.linspace(0, max(x), len(x), endpoint=True)
+# plt.plot(x_plot, my_func(x, *coefs))
+
+# err = [abs(y[i] - my_func(x[i], *coefs)) for i in range(len(x))]
+# big_error = [i for i in range(len(x)) if err[i] > 5 * np.mean(err)]
+
+# plt.plot(x, err)
+# plt.show()
+
+# x = np.delete(x, big_error)
+# y = np.delete(y, big_error)
+
+# coefs, _ = curve_fit(my_func, x, y)
+# x_plot = np.linspace(0, max(x), len(x), endpoint=True)
+# plt.plot(x_plot, my_func(x, *coefs))
+
+# err = [abs(y[i] - my_func(x[i], *coefs)) for i in range(len(x))]
+# plt.plot(x, err)
+
+# plt.plot(x, y)
+# plt.show()
+
+# print(heron(1, 2, 5) - math.sqrt(2))
+
+# f = lambda x: x**2 - 2
+# for i in range(50):
+#     print(bisection(1, 2, i, f)[-1] - math.sqrt(2))
