@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 import numpy as np
 import pandas as pd
-from funtionality.roots import bisection, newton, secant, heron
+from functionality.roots import bisection, newton, secant, heron
 
 # def horner(
 #     a: list,
