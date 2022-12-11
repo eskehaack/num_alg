@@ -34,7 +34,7 @@ def newton(starting_point: float, nmax: int, f: type, f_div: type) -> list:
 
 def secant(a: float, b: float, nmax: int, f: type) -> list:
     """
-    secant method for finding roots in funtions
+    secant method for finding roots in functions
 
     Parameters
     ---------
@@ -49,7 +49,7 @@ def secant(a: float, b: float, nmax: int, f: type) -> list:
         number of itterations
 
     f
-        funtion to be estimated
+        function to be estimated
 
     Returns
     ---------

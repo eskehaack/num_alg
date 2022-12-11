@@ -9,6 +9,9 @@ def comp_trap(f, a, b, n):
 
 
 def MySimpson(f, a, b, n):
+    '''
+    Comp simpson
+    '''
     if n % 2 == 1:
         print(f"ERROR: n={n} is not even")
         return float("NaN")
